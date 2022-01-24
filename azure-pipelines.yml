@@ -20,7 +20,7 @@ steps:
 - task: MSBuild@1
   inputs:
     solution: 'pipelines-dotnet-core.csproj'
-    msbuildArguments: '/p:OutDir=$(Build.ArtifactsStagingDirectory)'
+    msbuildArguments: '/p:OutDir=$(Build.ArtifactStagingDirectory)'
   
 - task: PublishBuildArtifacts@1
   inputs:
