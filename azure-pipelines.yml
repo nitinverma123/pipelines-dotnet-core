@@ -21,3 +21,9 @@ steps:
   inputs:
     solution: 'pipelines-dotnet-core.sln'
     msbuildArguments: '/p:OutDir=$(Build.ArtifactsStagingDirectory)'
+  
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'Publish Artifacts'
+    publishLocation: 'Container'
